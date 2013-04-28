@@ -1,0 +1,263 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.94]{geometry}
+
+% ajust the width of the column with the dates
+\setlength{\hintscolumnwidth}{3cm}
+
+% CV TYPE
+\usepackage{ifthen}
+
+\ifdef{\Lang}
+{}{\def\Lang{fr}}
+%\def\Lang{en}
+\ifthenelse{\equal{\Lang}{en}}
+	{\newcommand{\T}[2]{#1}}
+	{\newcommand{\T}[2]{#2}}
+%\newcommand{\T}[2][]{\ifthenelse{\equal{\LangCond}{en}}{#1}{#2}}
+
+\ifdef{\Type}
+{}{\def\Type{Short}}
+%\def\Type{Long}
+\ifthenelse{\equal{\Type}{Long}}
+	{\newcommand{\LongText}[1]{#1}}
+	{\newcommand{\LongText}[1]{}}
+\ifthenelse{\equal{\Type}{Short}}
+	{\newcommand{\ShortText}[1]{#1}}
+	{\newcommand{\ShortText}[1]{}}
+%\newcommand{\LongText}[1]{\ifthenelse{\equal{\TypeCond}{Long}}{#1}{}}
+
+% HEADER
+\firstname{Aurélien}
+\familyname{Chabot}
+\title{\T{Linux Software Engineer}{Ingénieur de developpement informatique}}
+\address{40 rue de la justice}{75020 Paris}
+%\mobile{(+33)6 45 90 58 47}
+\email{aurelien@chabot.fr}
+\homepage{www.aurelienchabot.fr}
+\extrainfo{\T{French - 25 years old}{Né le 28 août 1987 - 25 ans}}
+\photo{photo.jpg}
+
+\begin{document}
+\maketitle
+
+\section{\textsc{\T{Studies}{Formation}}}
+
+	\cventry{2008 - 2011}
+	{\T{Engineering diploma ( Master's degree in Engineering )}{Diplômé ingénieur en informatique}}
+	{INP ENSEEIHT \T{( top ranking engineering school )}{( École d'ingénieur )}}
+	{Toulouse\T{ ( France )}{}}{}
+	{
+		\T{Specialized in Computer Science and Applied Mathematics}{\underline{Filière} : Informatique et mathématiques appliquées}.
+		\LongText{
+			\newline{}
+			\T{\underline{Subjects} : Theory of computation, Software engineering, Computer architecture, Concurrent computing, Network architecture, Compilation.}
+			{\underline{Enseignements Suivis} : Théorie informatique, Génie logiciel, Architecture des ordinateurs, Systèmes concurrents, Intergiciel, Système temps réel, Architecture des réseaux, Compilation, Analyse de données, Base de données, Technologie web.}
+		}
+	}
+
+	\cventry{Sept - \T{Dec}{Déc} 2010}
+	{\T{Master degree in computer science}{Master en informatique}}
+	{HKU ( Hong Kong University )}{}{}
+	{
+		\T{Exchange student in undergraduate and postgraduate courses}{Étudiant en échange}.
+		\LongText{ \newline{}
+			\T{
+				\underline{Subjects} : Multimedia computing and application, Computer and network security,Embedded Systems and
+				pervasive computing, Implementation, Testing and Maintenance of Software Systems, Wireless, Image processing
+				and computer vision.
+			}{
+				\underline{Enseignements Suivis} : Multimedia et application, Sécurité des réseaux,
+				Système embarqué et informatique ubiquitaire, Implémentation, Test et Maintenance des systèmes informatiques,
+				Réseaux sans fil, Traitement d'Images et Vision par Ordinateur.
+			}
+		}
+	}
+
+	\cventry{2005 - 2008}
+	{ \T{Three year intensive undergraduate course in preparatory classes
+	for competitive entrance exams into national engineering schools}
+	{Classes préparatoires scientifiques ( MPSI/MP )}}
+	{Lycée Faidherbe, Lille \T{( France )}{( 59 )}}{}{}
+	{\T{\underline{Subjects} : Mathematics, Physics and Computing}
+	{\underline{Enseignements Suivis} : Mathématique, Physique and Informatique}}
+
+	\cventry{2005}
+	{\T{Scientific Baccalaureate with distinction \small ( French equivalent of 'A' levels in Mathematics, Physics and Biology )}
+	{Baccalauréat Scientifique avec mention bien}}
+	{Lycée Robespierre, Arras \T{( France )}{( 62 )}}
+	{}{}{}{}
+
+
+\section{\textsc{\T{Experiences}{Expériences}}}
+
+	\subsection{\textsc{\T{Job}{Emplois}}}
+
+		\cventry{\T{Since September 2012}{Depuis Septembre 2012}}
+		{\T{Software engineer for multimedia embedded system for cars.}
+		{Ingénieur de développement pour les equipements multimedia pour l'automobile.}}
+		{Parrot}{Paris}{}
+		{
+			\T{Working as software integrator on OEM product.}
+			{Intégration logiciel pour les produits OEM.}
+		}
+
+		\cventry{\T{Since Oct 2011}{Depuis Oct 2011}}
+		{\T{Software engineer, specialized in image processing and Linux embedded systems}
+		{Ingénieur de développement, spécialisé dans le traitement d'image et les systèmes embarqués Linux}}
+		{OpenWide}{Paris}{}
+		{\ShortText{
+			\T{Work on CCTV image processing software and embedded Linux system developement.}
+			{Travaux en traitement d'image pour la vidéo surveillance et sur des systèmes embarqué Linux.}
+		}}
+		\LongText{
+			\cvline{}{
+				\T{
+					\textbf{CCTV analysis to detect defects.}
+					In order to maintain the fiability of big CCTV installation, this software checks periodically on the CCTV
+					records and computes each camera state. It can detect blur image, over/under-exposition, moved camera...
+				}{
+					\textbf{Analyse de vidéos surveillance pour la détection de défauts.}
+					Afin d'assurer la fiabilité de grands parcs de vidéo surveillance, ce logiciel effectue des contrôles
+					sur les caméras du parc et évalues leurs états. Il signale les défauts tel qu'une image floue,
+					une sur-exposition ou encore un décadrage de caméra.
+				}
+				\small
+				\begin{itemize}
+					\item \T{Technical environment}{Environnement technique} :
+						\begin{itemize}
+							\item \T{C++ QT}{C++ QT pour l'intégralité du logiciel} ;
+							\item \T{OpenCV library for camera image processing}{Bibliothèque OpenCV pour l'analyse des images récupérées sur les caméras} ;
+							\item \T{Several SDK for camera recorder}{Plusieurs SDK d'enregistreurs vidéos}.
+						\end{itemize}
+					\item \T{Developed functionalities}{Listes des fonctionnalités développées} :
+						\begin{itemize}
+							\item \T{JSON/REST communication with GUI web}{Interfaçage JSON/REST avec l'IHM web} ;
+							\item \T{Works on new support of SDK for camera recorder}{Réalisation de supports de SDK d'enregistreurs nécessaires à l'acquisition d'image} ;
+							\item \T{Architectural rewrite}{Refonte architecturale lors d'ajout de fonctionnalités dans les méthodes d'acquisitions des images}.
+						\end{itemize}
+				\end{itemize}
+			}
+			\cvline{}{
+				\T{
+					\textbf{Linux/ARM board to control and configure a refrigerated tank.}
+					A provided software allowed to control a refrigerated tank. The project aims to build a Linux system and	a QT graphical user interface.
+				}{
+					\textbf{Carte Linux/ARM de contrôle et de configuration de cuve réfrigérée.}
+					À partir d'un code C, réalisé par le client, permettant le contrôle d'une cuve réfrigérée le projet consiste à mettre
+					en place un système linux et une interface graphique en QT pour le produit.
+				}
+				\small
+				\begin{itemize}
+					\item \T{Technical environment}{Environnement technique} :
+						\begin{itemize}
+							\item \T{C++ QT for the GUI}{C++ QT pour l'IHM} ;
+							\item \T{C for the tank control}{C pour le contrôle de la cuve} ;
+							\item \T{Pragmatec board for the hardware}{Carte Pragmatec pour le support matériel} ;
+							\item \T{Buildroot to generate the Linux system}{Buildroot pour la génération de l'environnement Linux}.
+						\end{itemize}
+					\item \T{Developed functionalities}{Listes des fonctionnalités développées} :
+						\begin{itemize}
+							\item \T{GUI in QT}{Toute l'interface graphique en QT} ;
+							\item \T{C code modifications to interface with GUI}{Modification du code C existant afin de s'interfacer avec l'IHM} ;
+							\item \T{Libraries adding to the Linux system with buildroot}{Ajout de librairies dans le système avec Buildroot}.
+						\end{itemize}
+				\end{itemize}
+			}
+		}
+
+	\subsection{\textsc{\T{Internchip}{Stages}}}
+
+		\cventry{\T{March-Sept}{Mars-Sept} 2011}
+		{\T{Internship in image processing development}{Stage en developement pour le traitement d'image}}
+		{OpenWide}{Paris}{}
+		{\T{C++ development for CCTV image processing. Development with QT and OpenCV.}{Développement en C++ de traitement des images pour la vidéosurveillance.}}
+
+		\cventry{\T{Summer}{Été} 2010}
+		{\T{Internship in an image processing laboratory}{Stage dans un laboratoire de traitement d'image}}
+		{\T{South Dakota State University ( US )}{Université d'État du Dakota du Sud ( États-Unis )}}{}{}
+		{\T{Software development in matlab for applying interpolation algorithms on database satellite data.}
+		{Développement logiciel en matlab afin d'appliquer un algorithme d'interpolation sur des données satellitaires stockées dans une base de données.}}
+
+		\cventry{\T{Summer}{Été} 2009}
+		{\T{Internship in web development}{Stage en développement web}}{JNOV}{}{}
+		{\T{Development in html, php, sql and javascript. Use of library and api : Google Map, fpdf, Jquery...}
+		{Développement en html, php, sql et javascript. Utilisation de bibliothèque et api : Google Map, fpdf, Jquery...}}
+
+	\LongText{
+		\subsection{\textsc{\T{Study Project}{Projets d'Études}}}
+
+			\cventry{2009 - 2010}
+			{\T{C++ Project ( in pair )}{Projet en C++ ( en binôme )}}
+			{}{}{}
+			{\T{Realization of a cryptanalyseur to decrypt message, crypt with simple permutation key, by using statistic analysis.}
+			{Réalisation d'un cryptanalyseur pour chiffrer des messages, cryptés avec une clé simple a permutation, en utilisant l'analyse statistique.}}
+
+			\cventry{2008 - 2009}
+			{\T{C Project ( single )}{Projet en C ( individuel )}}
+			{}{}{}
+			{
+				\T{Realisation of a calculator for arithmetic expressions in Polish suffixed notation.}
+				{Réalisation d'un calculateur d'expressions arithmétiques en notation polonaise suffixée.}
+				\begin{itemize}
+					\item \T{Realisation of a linear structure ( stack ) module handling abstract types}{Réalisation d'un module de gestion de structures linéaires ( piles ) manipulant des types abstraits} ;
+					\item \T{Memory management by allocation and release}{Gestion de la mémoire par allocation et libération} ;
+					\item \T{Unit testing on every function}{Test unitaire sur chaque fonction}.
+				\end{itemize}
+			}
+
+			\cventry{}
+			{\T{Java Project ( in pairs )}{Projet en Java ( en binôme )}}
+			{}{}{}
+			{
+				\T{Realisation of a software, with a graphic user interface, permitting to generate pictures in a scene
+				containing objects with a ray tracer algorithm.}
+				{Réalisation d'un programme, avec une interface graphique, permettant de générer des images grace à un algorithme de lancer de rayons dans une scène contenant des objets géométriques.}
+				\begin{itemize}
+					\item \T{Elaboration of UML diagrams}{Élaboration de diagrammes de modélisation UML} ;
+					\item \T{Development in respecting MVC pattern}{Développement de l'application en respectant le modèle MVC} ;
+					\item \T{Management of pictures recording in ppm format thus scenes and points of view recording in xml format ; xml files syntax respecting a provided dtd file}
+							{Gestion de l'enregistrement des images au format ppm ainsi que de la scène et des points de vues au format xml ; la syntaxe des fichiers xml respectant une dtd fournie} ;
+					\item \T{Tests of the different functions with JUnit}{Élaboration de tests unitaires à l'aide de JUnit}.
+				\end{itemize}
+			}
+
+	}
+
+\section{\textsc{Langues}}
+
+	\T{\cvlanguage{French}{Native speaker}{}}{}
+
+	\cvlanguage{\T{English}{Anglais}}{\T{Working Proficient}{Niveau professionnel}}{}
+	\cvline{}{
+		\T{Ability to chair and participate in meeting, give presentations and write report}
+		{Capable de diriger un meeting et d'y participer, de faire des présentations ainsi que de rediger des rapports}
+		. \textbf{TOEIC 934}}
+
+	%\cvlanguage{\T{Japanese \& Spanish}{Japonais \& Espagnol}}{\T{Elementary level}{Notion}}{}
+
+\section{\textsc{\T{IT Skills}{Compétences}}}
+
+	\cvline{\T{Programmings}{Programmation}}{C++, C, Java, Python, Bash, Fortran, CamL, Matlab}
+	\cvline{Web}{HTML, CSS, PHP, SQL, JavaScript, JEE}
+	\cvline{\T{Modelisation}{Modélisation}}{UML}
+	\cvline{Libraries / \T{Tools}{Outils}}{QT, OpenCV, Buildroot}
+
+\section{\textsc{\T{Interest}{Loisirs}}}
+
+	\cvline{Sports}{\T{Regular training of swimming and course}{Natation, Rock, Course pédestre}.}
+	\cvline{\T{Reading}{Lecture}}{\T{Fiction novel, international news}{Roman fiction, Actualité internationale}.}
+
+
+\end{document}
