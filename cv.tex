@@ -13,6 +13,14 @@
 % adjust the page margins
 \usepackage[scale=0.94]{geometry}
 
+% Itemize item
+\usepackage{enumitem}
+%\setlist{leftmargin=5.5mm}
+\newlist{myitemize}{itemize}{3}
+\setlist[myitemize,1]{noitemsep,nolistsep,label=\textbullet,leftmargin=2em}
+\setlist[myitemize,2]{noitemsep,nolistsep,label=$\rightarrow$,leftmargin=1em}
+\setlist[myitemize,3]{noitemsep,nolistsep,label=$\diamond$}
+
 % ajust the width of the column with the dates
 \setlength{\hintscolumnwidth}{3cm}
 
@@ -52,7 +60,7 @@
 \begin{document}
 \maketitle
 
-\vspace*{-5mm}
+\vspace*{-12mm}
 
 \section{\textsc{\T{Studies}{Formation}}}
 
@@ -106,96 +114,124 @@
 
 	\subsection{\textsc{\T{Job}{Emplois}}}
 
-		\cventry{\T{Sept 2012 - Oct 2013}{Sept 2012 - Oct 2013}}
-		{\T{Software engineer contractor, working on multimedia embedded system for cars.}
-		{Ingénieur de développement consultant pour les équipements multimédias pour l'automobile.}}
-		{Parrot}{Paris}{}
-		{
-			\T{Integration and development of a Linux OEM product dedicated to bluetooth, wifi and usb connectivity.}
-			{Intégration et développement d'un produit OEM Linux dédié à la connectivité bluetooth, wifi et usb.}
-		}
+		\cventry{\T{Nov 2014 - now}{Depuis Nov 2014}}
+		{\T{Software engineer, working on android embedded system for cars}
+		{Ingénieur de développement pour des autoradios sur android}}
+		{Parrot}{Paris}{}{}
+
 		\LongText{
 			\cvline{}{
-				\small
-				\begin{itemize}
-					\item \T{Technical environment}{Environnement technique} :
-						\begin{itemize}
-							\item C/C++ ;
-							\item \T{Parrot Bluetooth stack and multimedia library}{Librarie bluetooth et multimédia de Parrot} ;
-							\item \T{Parrot specific hardware}{Hardware spécifique Parrot}.
-						\end{itemize}
-				\end{itemize}
+				\T{Development of the android platform use on multiple OEM product}
+				{Développement de la platform android utilisé par plusieur produit OEM}
 			}
 		}
 
-		\cventry{\T{Oct 2011 - now}{Depuis oct 2011}}
-		{\T{Software engineer, specialized in image processing and Linux embedded systems}
-		{Ingénieur de développement, spécialisé dans le traitement d'image et les systèmes embarqués Linux}}
-		{OpenWide}{Paris}{}
-		{\ShortText{
-			\T{Worked on a CCTV image processing software and on embedded Linux system development.}
-			{Travaux en traitement d'image pour la vidéo surveillance et sur des systèmes embarqué Linux.}
-		}}
 		\LongText{
 			\cvline{}{
-				\T{
-					\textbf{CCTV analysis for subway interchange analysis}
-					Software builds to optimize subway parking time in station in the case of a driveless subway.
-					The system is linked to the control system of the subway and allow to impact in real time the subway parking time.
-				}{
-					\textbf{Analyse des échanges de voyageur entre le quai et le métro par vidéos surveillance.}
-					Logiciel connecté en temps réel au système de contrôle du métro automatique afin d'optimiser
-					l'arrêt des trains en station selon les échanges voyageurs.
-				}
 				\small
-				\begin{itemize}
-					\item \T{Technical environment}{Environnement technique} :
-						\begin{itemize}
-							\item C++, Python, QT;
-							\item Thrift, Boost, RobotFramework;
-						\end{itemize}
-				\end{itemize}
+				\T{Technical environment}{Environnement technique} :
+				\begin{myitemize}
+					\item Java, C/C++ ;
+					\item Android ;
+					\item \T{Bluetooth protocol}{Protocol bluetooth}.
+				\end{myitemize}
 			}
+		}
+
+		\cventry{\T{Oct 2011 - Nov 2014}{Oct 2011 - Nov 2014}}
+		{\T{Consulting software engineer, specialized in image processing and Linux embedded systems}
+		{Ingénieur de développement, spécialisé dans le traitement d'image et les systèmes embarqués Linux}}
+		{OpenWide}{Paris}{}{}
+
+		% Jun 2014 - Nov 2014
+		\cventry{\T{6 month}{6 mois}}
+		{\T{Contractor, OTT video streaming packaging}
+		{Ingénieur de développement consultant sur un logiciel de trans-packaging de flux video}}
+		{Anevia}{Paris}{}{}
+
+		\LongText{
 			\cvline{}{
-				\T{
-					\textbf{CCTV analysis to detect defects.}
-					Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
-					records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...
-				}{
-					\textbf{Analyse de vidéos surveillance pour la détection de défauts.}
-					Logiciel chargé d'assurer la fiabilité de grands parcs de vidéo surveillance en effectuant des contrôles
-					journaliers sur les enregistrements vidéos. L'état de la caméra est déterminé grâce à différents critères : image floue,
-					sur-exposition ou encore décadrage de la caméra.
-				}
 				\small
-				\begin{itemize}
-					\item \T{Technical environment}{Environnement technique} :
-						\begin{itemize}
-							\item \T{C++ QT}{C++ QT pour l'intégralité du logiciel} ;
-							\item \T{OpenCV library for camera image processing}{Bibliothèque OpenCV pour l'analyse des images récupérées sur les caméras} ;
-							\item \T{Several SDK for camera recorder}{Plusieurs SDK d'enregistreurs vidéos}.
-						\end{itemize}
-				\end{itemize}
+				\T{Technical environment}{Environnement technique} :
+				\begin{myitemize}
+					\item PHP, Python, C/C++ ;
+					\item Postgresql ;
+					\item \T{Debian packaging}{Generation de paquet Debian}.
+				\end{myitemize}
 			}
+		}
+
+		% Nov 2013 - May 2014
+		\cventry{\T{10 month}{10 mois}}
+		{\T{Development on a CCTV analysis software for subway interchange analysis}
+		{Developpement sur un logicel d'analyse des échanges de voyageur entre le quai et le métro par vidéos surveillance.}}
+		{OpenWide}{Paris}{}{}
+
+		\LongText{
+			\T{Software builds to optimize subway parking time in station in the case of a driveless subway.
+			The system is linked to the control system of the subway and allow to impact in real time the subway parking time.}
+			{Logiciel connecté en temps réel au système de contrôle du métro automatique afin d'optimiser
+			l'arrêt des trains en station selon les échanges voyageurs.}
+
 			\cvline{}{
-				\T{
-					\textbf{Linux/ARM board to control and configure a refrigerated tank.}
-					The project aimed to build a full embedded Linux system and a QT graphical user interface.
-				}{
-					\textbf{Carte Linux/ARM de contrôle et de configuration de cuve réfrigérée.}
-					À partir d'un code C, réalisé par le client, permettant le contrôle d'une cuve réfrigérée le projet a consisté à mettre
-					en place un système Linux et une interface graphique en QT pour le produit.
-				}
 				\small
-				\begin{itemize}
-					\item \T{Technical environment}{Environnement technique} :
-						\begin{itemize}
-							\item \T{C++ QT for the GUI}{C++ QT pour l'IHM} ;
-							\item \T{C for the tank control}{C pour le contrôle de la cuve} ;
-							\item \T{Pragmatec board for the hardware}{Carte Pragmatec pour le support matériel} ;
-							\item \T{Buildroot to generate the Linux system}{Buildroot pour la génération de l'environnement Linux}.
-						\end{itemize}
-				\end{itemize}
+				\T{Technical environment}{Environnement technique} :
+				\begin{myitemize}
+					\item C++, Python, QT ;
+					\item Thrift, Boost, RobotFramework.
+				\end{myitemize}
+			}
+		}
+
+		% Sept 2012 - Oct 2013
+		\cventry{\T{1 year}{1 ans}}
+		{\T{Contractor, working on multimedia embedded system for cars}
+		{Ingénieur de développement consultant pour les équipements multimédias pour l'automobile}}
+		{Parrot}{Paris}{}{}
+
+		\LongText{
+			\cvline{}{
+				\T{Integration and development of a Linux OEM product dedicated to bluetooth, wifi and usb connectivity.}
+				{Intégration et développement d'un produit OEM Linux dédié à la connectivité bluetooth, wifi et usb.}
+			}
+		}
+
+		\LongText{
+			\cvline{}{
+				\small
+				\T{Technical environment}{Environnement technique} :
+				\begin{myitemize}
+					\item C/C++ ;
+					\item \T{Bluetooth protocol}{Protocol bluetooth}.
+				\end{myitemize}
+			}
+		}
+
+		% Oct 2011 - Aug 2012
+		\cventry{\T{1 year}{1 ans}}
+		{\T{Development on a CCTV analysis software to detect camera defect}
+		{Developpement sur un logiciel d'analyse de vidéos surveillance pour la détection de défauts des cameras}}
+		{OpenWide}{Paris}{}{}
+
+		\LongText{
+			\cvline{}{
+				\T{Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
+				records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...}
+				{Logiciel chargé d'assurer la fiabilité de grands parcs de vidéo surveillance en effectuant des contrôles
+				journaliers sur les enregistrements vidéos. L'état de la caméra est déterminé grâce à différents critères : image floue,
+				sur-exposition ou encore décadrage de la caméra.}
+			}
+		}
+
+		\LongText{
+			\cvline{}{
+				\small
+				\T{Technical environment}{Environnement technique} :
+				\begin{myitemize}
+					\item \T{C++ QT}{C++ QT} ;
+					\item \T{OpenCV library for camera image processing}{Bibliothèque OpenCV pour l'analyse des images récupérées sur les caméras} ;
+					\item \T{Several SDK for camera recorder}{Plusieurs SDK d'enregistreurs vidéos}.
+				\end{myitemize}
 			}
 		}
 
@@ -226,6 +262,7 @@
 		{\T{Allow the control of UPnP compatible devices and the sharing of local multimedia content with UPnP.}
 		{Permet le contrôle d'appareil compatible UPnP et le partage du contenu multimédia local.}}
 
+	\LongText{
 		\cventry{Home-Pi}
 		{\T{A Home domotique domotique service on top of a raspberrypi.}
 		{Service de domotique pour la maison déployable sur raspberrypi.}}
@@ -234,16 +271,17 @@
 		home heaters and lights are monitored, controled and scheduled from a phone or a computer.}
 		{Grace au contrôle d'un capteur de température (via I2C) et d'un émetteur radio (via GPIO),
 		les chauffages et lumières peuvent être contrôlés et programmés depuis un téléphone ou un ordinateur.}}
+	}
 
-	\LongText{
-		\subsection{\textsc{\T{Study Project}{Projets d'Études}}}
+	%\LongText{
+	%	\subsection{\textsc{\T{Study Project}{Projets d'Études}}}
 
-			\cventry{2009 - 2010}
-			{\T{C++ Project ( in pair )}{Projet en C++ ( en binôme )}}
-			{}{}{}
-			{\T{Realization of a cryptanalyseur to decrypt message, crypt with simple permutation key, by using statistic analysis.}
-			{Réalisation d'un cryptanalyseur pour chiffrer des messages, cryptés avec une clé simple a permutation,
-			en utilisant l'analyse statistique.}}
+			%\cventry{2009 - 2010}
+			%{\T{C++ Project ( in pair )}{Projet en C++ ( en binôme )}}
+			%{}{}{}
+			%{\T{Realization of a cryptanalyseur to decrypt message, crypt with simple permutation key, by using statistic analysis.}
+			%{Réalisation d'un cryptanalyseur pour chiffrer des messages, cryptés avec une clé simple a permutation,
+			%en utilisant l'analyse statistique.}}
 
 			%\cventry{2008 - 2009}
 			%{\T{C Project ( single )}{Projet en C ( individuel )}}
@@ -258,36 +296,31 @@
 			%	\end{itemize}
 			%}
 
-			\cventry{2008 - 2009}
-			{\T{Java Project ( in pairs )}{Projet en Java ( en binôme )}}
-			{}{}{}
-			{
-				\T{Realisation of a software, with a graphic user interface, permitting to generate pictures in a scene
-				containing objects with a ray tracer algorithm.}
-				{Réalisation d'un programme, avec une interface graphique, permettant de générer des images
-				grâce à un algorithme de lancer de rayons dans une scène contenant des objets géométriques.}
-				\begin{itemize}
-					\item \T{Elaboration of UML diagrams}{Élaboration de diagrammes de modélisation UML} ;
-					\item \T{Development in respecting MVC pattern}{Développement de l'application en respectant le modèle MVC} ;
-					\item \T{Management of pictures recording in PPM format thus scenes and points of view recording in XML format ;
-							XML files syntax respecting a provided DTD file}
-							{Gestion de l'enregistrement des images au format PPM ainsi que de la scène et des points de vues au format XML ;
-							la syntaxe des fichiers XML respectant une DTD fournie} ;
-					\item \T{Tests of the different functions with JUnit}{Élaboration de tests unitaires à l'aide de JUnit}.
-				\end{itemize}
-			}
-
-	}
+			%\cventry{2008 - 2009}
+			%{\T{Java Project ( in pairs )}{Projet en Java ( en binôme )}}
+			%{}{}{}
+			%{
+			%	\T{Realisation of a software, with a graphic user interface, permitting to generate pictures in a scene
+			%	containing objects with a ray tracer algorithm.}
+			%	{Réalisation d'un programme, avec une interface graphique, permettant de générer des images
+			%	grâce à un algorithme de lancer de rayons dans une scène contenant des objets géométriques.}
+			%	\begin{myitemize}
+			%		\item \T{Elaboration of UML diagrams}{Élaboration de diagrammes de modélisation UML} ;
+			%		\item \T{Development in respecting MVC pattern}{Développement de l'application en respectant le modèle MVC} ;
+			%		\item \T{Management of pictures recording in PPM format thus scenes and points of view recording in XML format ;
+			%				XML files syntax respecting a provided DTD file}
+			%				{Gestion de l'enregistrement des images au format PPM ainsi que de la scène et des points de vues au format XML ;
+			%				la syntaxe des fichiers XML respectant une DTD fournie} ;
+			%		\item \T{Tests of the different functions with JUnit}{Élaboration de tests unitaires à l'aide de JUnit}.
+			%	\end{myitemize}
+			%}
+	%}
 
 \section{\textsc{Langues}}
 
 	\T{\cvlanguage{French}{Native speaker}{}}{}
 
-	\cvlanguage{\T{English}{Anglais}}{\T{Working Proficient}{Niveau professionnel}}{}
-	\cvline{}{
-		\T{Ability to chair and participate in meeting, give presentations and write report}
-		{Capable de diriger un meeting et d'y participer, de faire des présentations ainsi que de rediger des rapports}
-		. \textbf{TOEIC 934}}
+	\cvlanguage{\T{English}{Anglais}}{\T{Working Proficient}{Niveau professionnel}, \textbf{TOEIC 934}}{}
 
 	%\cvlanguage{\T{Japanese \& Spanish}{Japonais \& Espagnol}}{\T{Elementary level}{Notion}}{}
 
@@ -295,14 +328,15 @@
 
 	\cvline{\T{Programmings}{Programmation}}{C++, C, Java, Python, Bash, Fortran, CamL, Matlab}
 	\cvline{Web}{HTML, CSS, PHP, SQL, JavaScript, JEE}
-	\cvline{\T{Modelisation}{Modélisation}}{UML}
-	\cvline{Libraries / \T{Tools}{Outils}}{QT, OpenCV, Buildroot, Boost}
+	\cvline{Libraries / \T{Tools}{Outils}}{Android, QT, OpenCV, Buildroot, Boost}
 	\cvline{\T{Version Control}{Gestion de version}}{Git, SVN}
 
+
+\LongText{
 \section{\textsc{\T{Interest}{Loisirs}}}
 
 	\cvline{Sports}{\T{Regular training of swimming and course}{Natation, Course pédestre}.}
 	\cvline{\T{Reading}{Lecture}}{\T{Fiction novel, international news}{Roman fiction, Actualité internationale}.}
-
+}
 
 \end{document}
