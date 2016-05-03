@@ -3,7 +3,7 @@ all : long_en short_en long_fr short_fr clean
 
 long_en: cv.tex
 	@echo "Build english long CV"
-	@pdflatex --jobname Chabot_Aurelien_cv_2_en '\def\Type{Long}\def\Lang{en}\input{cv.tex}' cv.tex
+	@pdflatex --jobname Chabot_Aurelien_cv_en '\def\Type{Long}\def\Lang{en}\input{cv.tex}' cv.tex
 
 short_en: cv.tex
 	@echo "Build english short CV"
@@ -11,7 +11,7 @@ short_en: cv.tex
 
 long_fr: cv.tex
 	@echo "Build french long CV"
-	@pdflatex --jobname Chabot_Aurelien_cv_2_fr '\def\Type{Long}\def\Lang{fr}\input{cv.tex}' cv.tex
+	@pdflatex --jobname Chabot_Aurelien_cv_fr '\def\Type{Long}\def\Lang{fr}\input{cv.tex}' cv.tex
 
 short_fr: cv.tex
 	@echo "Build french short CV"
