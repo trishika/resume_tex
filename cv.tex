@@ -10,9 +10,6 @@
 % character encoding
 \usepackage[utf8]{inputenc}
 
-% adjust the page margins
-\usepackage[scale=0.95]{geometry}
-
 % Itemize item
 \usepackage{enumitem}
 %\setlist{leftmargin=5.5mm}
@@ -46,6 +43,16 @@
 	{\newcommand{\ShortText}[1]{}}
 %\newcommand{\LongText}[1]{\ifthenelse{\equal{\TypeCond}{Long}}{#1}{}}
 
+
+% adjust the page margins
+\LongText{
+	\usepackage[scale=0.93]{geometry}
+}
+\ShortText{
+	\usepackage[scale=0.96]{geometry}
+}
+
+
 % HEADER
 \firstname{Aurélien}
 \familyname{Chabot}
@@ -55,7 +62,12 @@
 \email{aurelien@chabot.fr}
 \homepage{www.aurelienchabot.fr}
 \extrainfo{\T{French - 28 years old}{Né le 28 août 1987 - 28 ans}}
-\photo{photo.jpg}
+\LongText{
+	\photo[60pt][0.4pt]{photo.jpg}
+}
+\ShortText{
+	\photo[50pt][0.4pt]{photo.jpg}
+}
 
 \begin{document}
 \maketitle
@@ -64,6 +76,13 @@
 
 \LongText{
 	\medskip
+}
+
+\LongText{
+	\setlength{\parskip}{0.15em}
+}
+\ShortText{
+	\setlength{\parskip}{0.1em}
 }
 
 \section{\textsc{\T{Studies}{Formation}}}
@@ -133,17 +152,13 @@
 		\cventry{\T{Dec 2014 - now}{Depuis Dec 2014}}
 		{\T{Software engineer, Android infotainment system for cars}
 		{Ingénieur de développement, Systèmes multimédia pour l'automobile sur Android}}
-		{Parrot Automotive}{Paris}{}{}
-
-		\LongText{
-			\cvline{}{
+		{Parrot Automotive}{Paris}{}{
 				\T{Android application development, developing middleware
 				interfaces to component such as radio and Bluetooth as well as
 				graphical views and behaviors of the media, telephony and system applications.}
 				{Développement d'applications Android constituant le système multimédia ainsi
 				que de middleware pour s'interfacer avec des fonctionnalités du système
 				tel que la radio et le Bluetooth}
-			}
 		}
 
 		\LongText{
@@ -160,19 +175,16 @@
 		{\T{Software engineer, OTT video streaming packaging (contractor for OpenWide)}
 		{Ingénieur de développement, packaging de flux video pour les protocols OTT
 		(prestation pour OpenWide)}}
-		{Anevia}{Paris}{}{}
-
-		\cvline{}{
-			\T{Server software development to serve video content (live and VOD)
-			in all existing OTT protocols (DASH, HLS...).}
-			{Développement pour serveur fournissant du contenu vidéo avec les protocoles OTT (DASH, HLS...)}
-		}
+		{Anevia}{Paris}{}{
+			\T{Development for a server providing video content with OTT protocols (DASH, HLS...).}
+			{Développement pour serveur fournissant du contenu vidéo avec les protocoles OTT (DASH, HLS...)}}
 
 		\LongText{
 			\cvline{}{
-				\T{Worked on the migration to PostgreSQL (from SQLite) by writing
+				\small
+				\T{Migration to PostgreSQL (from SQLite) by writing
 				database management tools in python up to the web user interface
-				in PHP. Main focus of work was around database request optimization
+				in PHP. Worked also on database request optimization
 				as well as load balancing and fail over strategy development.}
 				{Migration vers PostgreSQL (depuis SQLite) en développent des outils de
 				gestion de base de données en python. Optimisation des requêtes SQL. Développement d'une nouvelle architecture de load balancing et de fail over.}
@@ -192,9 +204,7 @@
 		\cventry{\T{Nov 2013 - May 2014}{Nov 2013 - Mai 2014}}
 		{\T{Software engineer, Image processing and Linux system development}
 		{Ingénieur de développement, Traitement d'image et dévelopement linux}}
-		{OpenWide}{Paris}{}{}
-
-		\cvline{}{
+		{OpenWide}{Paris}{}{
 			\T{Project to optimize the park time of automatic subway with video
 			analysis and real time communication with the command center.}
 			{Projet d'optimisation des temps d'arrêt en station d'un métro
@@ -204,8 +214,9 @@
 
 		\LongText{
 			\cvline{}{
+				\small
 				\T{Image processing optimization and adaptation of existing algorithms.
-				Architecture and development of the communication stack between on site
+				Architecture and development of the communication stack between the on site
 				server and the centralized one, as well as with the command center.
 				Architecture and development of a global control application of the system in
 				Qt. Project and team leading.}
@@ -234,9 +245,7 @@
 		\cventry{\T{Sept 2012 - Oct 13}{Sept 2012 - Oct 13}}
 		{\T{Software engineer, Multimedia embedded system for cars (contractor for OpenWide)}
 		{Ingénieur de développement, System embarquée multimédia pour l'automobile}}
-		{Parrot}{Paris}{}{}
-
-		\cvline{}{
+		{Parrot}{Paris}{}{
 			\T{Integration and development of a module dedicated to Bluetooth, Wifi and USB
 			connectivity acting as a provider of service to the main infotainment system.}
 			{Intégration et développement d'un produit Linux fournissant
@@ -245,6 +254,7 @@
 
 		\LongText{
 			\cvline{}{
+				\small
 				\T{Embedded Linux integration. Development of specific client feature into the
 				core application in C++. Handling of client technical request and feedback.}
 				{Integration pour système linux embarquée. Développement de fonctionnalité
@@ -262,19 +272,18 @@
 		}
 
 		% Oct 2011 - Aug 2012
-		\cventry{\T{Oct 2011 - Aug 2012 }{Oct 2011 - Aout 2012 }}
+		\cventry{\T{Sept 2011 - Aug 2012 }{Sept 2011 - Août 2012 }}
 		{\T{Software engineer, Image processing and Linux system development}
 		{Ingénieur de développement, Traitement d'image et développement linux}}
-		{OpenWide}{Paris}{}{}
-
-		\cvline{}{
-			\T{Worked on a software that help maintaining the reliability of big CCTV
-			installation by doing daily check on recording.}
+		{OpenWide}{Paris}{}{
+			\T{Software helping maintaining the reliability of big CCTV
+			network by doing daily check on recording.}
 			{Logiciel chargé d'assurer la fiabilité de grands parcs de vidéo surveillance en effectuant des contrôles journaliers sur les enregistrements vidéos.}
 		}
 
 		\LongText{
 			\cvline{}{
+				\small
 				\T{Image processing optimization and adaptation of existing algorithms.
 				Development of the JSON/REST communication stack between the treatment
 				server and web server.}
@@ -296,7 +305,7 @@
 
 	\subsection{\textsc{\T{Internships}{Stages}}}
 
-		\cventry{\T{March-Sept}{Mars-Sept} 2011}
+		\cventry{\T{Mar - Aug}{Mars - Août} 2011}
 		{\T{Internship in image processing development}{Stage en développement pour le traitement d'image}}
 		{OpenWide}{Paris}{}
 		{\T{C++ development for CCTV image processing. Development with QT and OpenCV.}
@@ -323,10 +332,10 @@
 	\subsection{\textsc{\T{Personnal Projects}{Projets personnels}}}
 
 		\cvline{DroidUPnP}
-		{\T{\textbf{Android application} allowing control of UPnP compatible
-		device and share of local multimedia content.}
-		{\textbf{Application Android} permettant de controller les appareils
-		compatibles UPnP ainsi que de partager du contenus multimedia.}}
+		{\T{\textbf{Android application} to control UPnP
+		device and share local multimedia content.}
+		{\textbf{Application Android} pour controller les appareils
+		UPnP et partager les contenus multimedia locaux.}}
 
 	\LongText{
 		\cvline{Home-Pi}
