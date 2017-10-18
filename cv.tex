@@ -19,7 +19,7 @@
 \setlist[myitemize,3]{noitemsep,nolistsep,label=$\diamond$}
 
 % ajust the width of the column with the dates
-\setlength{\hintscolumnwidth}{3cm}
+\setlength{\hintscolumnwidth}{2.6cm}
 
 % CV TYPE
 \usepackage{ifthen}
@@ -43,7 +43,6 @@
 	{\newcommand{\ShortText}[1]{}}
 %\newcommand{\LongText}[1]{\ifthenelse{\equal{\TypeCond}{Long}}{#1}{}}
 
-
 % adjust the page margins
 \LongText{
 	\usepackage[scale=0.93]{geometry}
@@ -51,7 +50,6 @@
 \ShortText{
 	\usepackage[scale=0.96]{geometry}
 }
-
 
 % HEADER
 \firstname{Aurélien}
@@ -79,77 +77,29 @@
 }
 
 \LongText{
-	\setlength{\parskip}{0.15em}
+    %\color{darkgray}
+	\addtolength{\leftskip}{0.5em}
+    Highly experienced software developer in C++, Java and Python. I have a strong knowledge of the Linux environment and experience in working for embedded system as well as optimized server software. I love developing knowledge in a wide range of new technologies and I have basic knowledge in different other programming languages such as Go, Rust and Ruby. I am a Scrum experience developer.
 }
-\ShortText{
-	\setlength{\parskip}{0.1em}
-}
-
-\section{\textsc{\T{Studies}{Formation}}}
-
-	\cventry{2008 - 2011}
-	{\T{Master of Engineering in Computer Science}
-	{Diplômé ingénieur en informatique}}
-	{INP ENSEEIHT \T{(top ranking engineering school)}{(École d'ingénieur)}}
-	{Toulouse\T{ ( France )}{}}{}
-	{
-		\T{Specialised in Computer Science and Applied Mathematics}
-		{\underline{Filière} : Informatique et mathématiques appliquées}.
-		\LongText{
-			\newline{}
-			\T{\underline{Subjects} : Theory of computation, Software engineering,
-			Computer architecture, Concurrent computing, Network architecture, Compilation.}
-			{\underline{Enseignements Suivis} : Théorie informatique, Génie logiciel,
-			Architecture des ordinateurs, Systèmes concurrents, Intergiciel,
-			Système temps réel, Architecture des réseaux, Compilation, Analyse de données,
-			Base de données, Technologie web.}
-		}
-	}
-
-	\cventry{Sept - \T{Dec}{Déc} 2010}
-	{\T{Master of Engineering in Computer Science}{Master en informatique}}
-	{HKU (Hong Kong University)}{}{}
-	{
-		\T{Exchange student in undergraduate and postgraduate courses}{Étudiant en échange}.
-		\LongText{ \newline{}
-			\T{
-				\underline{Subjects} : Multimedia computing and application,
-				Computer and network security,Embedded Systems and pervasive computing,
-				Implementation, Testing and Maintenance of Software Systems, Wireless,
-				Image processing and computer vision.
-			}{
-				\underline{Enseignements Suivis} : Multimedia et application,
-				Sécurité des réseaux, Système embarqué et informatique ubiquitaire,
-				Implémentation, Test et Maintenance des systèmes informatiques,
-				Réseaux sans fil, Traitement d'Images et Vision par Ordinateur.
-			}
-		}
-	}
-
-	\cventry{2005 - 2008}
-	{ \T{Three year intensive undergraduate course in preparatory classes
-	for competitive entrance exams into national engineering schools}
-	{Classes préparatoires scientifiques (MPSI/MP)}}
-	{Lycée Faidherbe, Lille \T{(France)}{(59)}}{}{}
-	{\T{\underline{Subjects} : Mathematics, Physics and Computing}
-	{\underline{Enseignements Suivis} : Mathématique, Physique and Informatique}}
-
-	\cventry{2005}
-	{\T{Scientific Baccalaureate with distinction \small (French equivalent of 'A' levels
-	in Mathematics, Physics and Biology)}
-	{Baccalauréat Scientifique avec mention bien}}
-	{Lycée Robespierre, Arras \T{(France)}{(62)}}
-	{}{}{}{}
 
 \LongText{
-	\medskip
+	\setlength{\parskip}{0.2em}
 }
+\ShortText{
+	\setlength{\parskip}{0.15em}
+}
+
+\section{\textsc{\T{Skills}{Compétences}}}
+
+	\cvline{\T{Programmings}{Programmation}}{C++, C, Java, Python, Ruby, Go, Rust, Bash, Javascript, PHP, SQL, HTML, CSS}
+	\cvline{Libraries/\T{Tools}{Outils}}{Git, Android, QT, OpenCV, Buildroot, Boost, Gstreamer, Kafka}
+    \cvline{\T{Platforms}{Environnement}}{GNU/Linux, Busybox/Linux, Android}
 
 \section{\textsc{\T{Experience}{Expérience}}}
 
-	\subsection{\textsc{\T{Jobs}{Emplois}}}
+	%\subsection{\textsc{\T{Jobs}{Emplois}}}
 
-		\cventry{\T{Sept 2016 - now}{Depuis Sept 2016}}
+		\cventry{\T{Sept 2016 --\linebreak Sept 2017}{Sept 2016 --\linebreak Sept 2017}}
 		{\T{Software engineer, Financial protocols analysis}
 		{Ingénieur de développement, Analyse de protocols financiers}}
 		{Corvil}{Dublin}{}{
@@ -169,7 +119,7 @@
 			}
 		}
 
-		\cventry{\T{Dec 2014 - Sept 2016}{Dec 2014 - Sept 2016}}
+		\cventry{\T{Dec 2014 --\linebreak Sept 2016}{Dec 2014 --\linebreak Sept 2016}}
 		{\T{Software engineer, infotainment system for cars}
 		{Ingénieur de développement, Systèmes multimédia pour l'automobile sur Android}}
 		{Parrot Automotive}{Paris}{}{
@@ -192,8 +142,8 @@
 		}
 
 		% Jun 2014 - Nov 2014
-		\cventry{\T{Jun 2014 - Nov 2014}{Juin 2014 - Nov 2014}}
-		{\T{Software engineer, OTT video streaming packaging (contractor for OpenWide)}
+		\cventry{\T{Jun 2014 --\linebreak Nov 2014}{Juin 2014 --\linebreak Nov 2014}}
+		{\T{Software engineer, OTT video streaming (contractor for OpenWide)}
 		{Ingénieur de développement, packaging de flux video pour les protocols OTT
 		(prestation pour OpenWide)}}
 		{Anevia}{Paris}{}{
@@ -222,7 +172,7 @@
 		}
 
 		% Nov 2013 - May 2014
-		\cventry{\T{Nov 2013 - May 2014}{Nov 2013 - Mai 2014}}
+		\cventry{\T{Nov 2013 --\linebreak May 2014}{Nov 2013 --\linebreak Mai 2014}}
 		{\T{Software engineer, Image processing and Linux system development}
 		{Ingénieur de développement, Traitement d'image et dévelopement linux}}
 		{OpenWide}{Paris}{}{
@@ -258,12 +208,8 @@
 			}
 		}
 
-		\LongText{
-			\newpage
-		}
-
 		% Sept 2012 - Oct 2013
-		\cventry{\T{Sept 2012 - Oct 13}{Sept 2012 - Oct 13}}
+		\cventry{\T{Sept 2012 --\linebreak Oct 2013}{Sept 2012 --\linebreak Oct 2013}}
 		{\T{Software engineer, Multimedia embedded system for cars (contractor for OpenWide)}
 		{Ingénieur de développement, System embarquée multimédia pour l'automobile}}
 		{Parrot}{Paris}{}{
@@ -292,8 +238,13 @@
 			}
 		}
 
+		\LongText{
+			\newpage
+		}
+
+
 		% Oct 2011 - Aug 2012
-		\cventry{\T{Sept 2011 - Aug 2012 }{Sept 2011 - Août 2012 }}
+		\cventry{\T{Sept 2011 --\linebreak Aug 2012}{Sept 2011 --\linebreak Août 2012}}
 		{\T{Software engineer, Image processing and Linux system development}
 		{Ingénieur de développement, Traitement d'image et développement linux}}
 		{OpenWide}{Paris}{}{
@@ -326,7 +277,7 @@
 
 	\subsection{\textsc{\T{Internships}{Stages}}}
 
-		\cventry{\T{Mar - Aug}{Mars - Août} 2011}
+		\cventry{\T{Mar --\linebreak  Aug}{Mars --\linebreak  Août} 2011}
 		{\T{Internship in image processing development}{Stage en développement pour le traitement d'image}}
 		{OpenWide}{Paris}{}
 		{\T{C++ development for CCTV image processing. Development with QT and OpenCV.}
@@ -413,6 +364,66 @@
 			%}
 	%}
 
+\section{\textsc{\T{Studies}{Formation}}}
+
+	\cventry{2008 -- 2011}
+	{\T{Master of Engineering in Computer Science}
+	{Diplômé ingénieur en informatique}}
+	{INP ENSEEIHT \T{(top ranking engineering school)}{(École d'ingénieur)}}
+	{Toulouse\T{ ( France )}{}}{}
+	{
+		\T{Specialised in Computer Science and Applied Mathematics}
+		{\underline{Filière} : Informatique et mathématiques appliquées}.
+		\LongText{
+			\newline{}
+			\T{\underline{Subjects} : Theory of computation, Software engineering,
+			Computer architecture, Concurrent computing, Network architecture, Compilation.}
+			{\underline{Enseignements Suivis} : Théorie informatique, Génie logiciel,
+			Architecture des ordinateurs, Systèmes concurrents, Intergiciel,
+			Système temps réel, Architecture des réseaux, Compilation, Analyse de données,
+			Base de données, Technologie web.}
+		}
+	}
+
+	\cventry{Sept --\linebreak  \T{Dec}{Déc} 2010}
+	{\T{Master of Engineering in Computer Science}{Master en informatique}}
+	{HKU (Hong Kong University)}{}{}
+	{
+		\T{Exchange student in undergraduate and postgraduate courses}{Étudiant en échange}.
+		\LongText{ \newline{}
+			\T{
+				\underline{Subjects} : Multimedia computing and application,
+				Computer and network security,Embedded Systems and pervasive computing,
+				Implementation, Testing and Maintenance of Software Systems, Wireless,
+				Image processing and computer vision.
+			}{
+				\underline{Enseignements Suivis} : Multimedia et application,
+				Sécurité des réseaux, Système embarqué et informatique ubiquitaire,
+				Implémentation, Test et Maintenance des systèmes informatiques,
+				Réseaux sans fil, Traitement d'Images et Vision par Ordinateur.
+			}
+		}
+	}
+
+	\cventry{2005 -- 2008}
+	{ \T{Three year intensive undergraduate course in preparatory classes
+	for competitive entrance exams into national engineering schools}
+	{Classes préparatoires scientifiques (MPSI/MP)}}
+	{Lycée Faidherbe, Lille \T{(France)}{(59)}}{}{}
+	{\T{\underline{Subjects} : Mathematics, Physics and Computing}
+	{\underline{Enseignements Suivis} : Mathématique, Physique and Informatique}}
+
+	\cventry{2005}
+	{\T{Scientific Baccalaureate with distinction \small (French equivalent of 'A' levels
+	in Mathematics, Physics and Biology)}
+	{Baccalauréat Scientifique avec mention bien}}
+	{Lycée Robespierre, Arras \T{(France)}{(62)}}
+	{}{}{}{}
+
+\LongText{
+	\medskip
+}
+
 \section{\textsc{\T{Languages}{Langues}}}
 
 	\T{\cvlanguage{French}{Native speaker}{}}{}
@@ -421,19 +432,12 @@
 
 	%\cvlanguage{\T{Japanese \& Spanish}{Japonais \& Espagnol}}{\T{Elementary level}{Notion}}{}
 
-\section{\textsc{\T{IT Skills}{Compétences}}}
+%\LongText{
+%\section{\textsc{\T{Interest}{Loisirs}}}
 
-	\cvline{\T{Programmings}{Programmation}}{C++, C, Java, Python, Ruby, Bash}
-	\cvline{Web}{HTML, CSS, PHP, SQL, JavaScript}
-	\cvline{Libraries / \T{Tools}{Outils}}{Android, QT, OpenCV, Buildroot, Boost, Gstreamer, Kafka}
-	\cvline{\T{Version control}{Gestion de version}}{Git, SVN}
-
-\LongText{
-\section{\textsc{\T{Interest}{Loisirs}}}
-
-	\cvline{Sports}{\T{Regular training of swimming and course}{Natation, Course pédestre}.}
-	\cvline{\T{Reading}{Lecture}}{\T{Fiction novel, international news}
-	{Roman fiction, Actualité internationale}.}
-}
+%	\cvline{Sports}{\T{Regular training of swimming and course}{Natation, Course pédestre}.}
+%	\cvline{\T{Reading}{Lecture}}{\T{Fiction novel, international news}
+%	{Roman fiction, Actualité internationale}.}
+%}
 
 \end{document}
